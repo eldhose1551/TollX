@@ -1,0 +1,35 @@
+import os
+import sys
+import itertools
+import math
+import logging
+import json
+import re
+import random
+from collections import OrderedDict
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+import matplotlib.lines as lines
+from matplotlib.patches import Polygon
+import tensorflow as tf
+# Root directory of the project
+ROOT_DIR = os.getcwd()
+
+# Import Mask RCNN
+sys.path.append(ROOT_DIR)  # To find local version of the library
+from mrcnn import utils
+from mrcnn import visualize
+from mrcnn.visualize import display_images
+import mrcnn.model as modellib
+from mrcnn.model import log
+
+import custom
+
+# Directory to save logs and trained model
+MODEL_DIR = os.path.join(ROOT_DIR, "logs")
+
+custom_WEIGHTS_PATH = "E:\truck_classiffy\mask_rcnn_wheel_0100.h5"  # TODO: update this path
+
+%matplotlib inline
